@@ -1,1 +1,2 @@
+I make some changes onto this second git text file from my GitHub repository.
 Second release of Hello World
