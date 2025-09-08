@@ -1,1 +1,2 @@
+I make some changes onto this starting git text file from my GitHub repository.
 This is first git file.
