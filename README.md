@@ -1,2 +1,2 @@
 # bootcampbatch12
-Created a repository in Linux Terminal.
+Created a repository for Linux Terminal.
