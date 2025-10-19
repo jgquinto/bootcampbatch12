@@ -1,6 +1,17 @@
-        phases:
-          install:
-            commands:
-              - echo "Installing NGINX..."
-              - apt-get update -y
-              - apt-get install -y nginx
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Installing NGINX..."
+      - apt-get update -y
+      - apt-get install -y nginx
+  build:
+    commands:
+      - echo "Copying index.html to /var/www/html"
+      - cp index.html /var/www/html/index.html
+      - echo "Configuring NGINX"
+
+artifacts:
+  files:
+    - /var/www/html/index.html
