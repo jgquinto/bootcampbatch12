@@ -4,14 +4,17 @@ phases:
   install:
     commands:
       - echo "Installing NGINX..."
-      - apt-get update -y
-      - apt-get install -y nginx
+      - sudo apt-get update -y
+      - sudo apt-get install -y nginx
   build:
     commands:
-      - echo "Copying index.html to /var/www/html"
+      - echo "Copying index.html to NGINX web root..."
       - cp index.html /var/www/html/index.html
+  post_build:
+    commands:
       - echo "Configuring NGINX"
 
 artifacts:
   files:
     - /var/www/html/index.html
+  discard-paths: yes
