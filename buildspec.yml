@@ -1,0 +1,6 @@
+        phases:
+          install:
+            commands:
+              - echo "Installing NGINX..."
+              - apt-get update -y
+              - apt-get install -y nginx
