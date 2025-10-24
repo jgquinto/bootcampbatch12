@@ -2,16 +2,15 @@ version: 0.2
 
 phases:
   install:
+    runtime-versions:
     commands:
       - echo "Installing NGINX..."
       - sudo apt-get update -y
       - sudo apt-get install -y nginx
   build:
     commands:
-      - echo "Copying index.html to NGINX web root..."
-      - cp index.html /var/www/html/index.html
-  post_build:
-    commands:
+      - echo "Copying index.html to /var/www/html..."
+      - sudo cp index.html /var/www/html/
       - echo "Configuring NGINX"
 
 artifacts:
